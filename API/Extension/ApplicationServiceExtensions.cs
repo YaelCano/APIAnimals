@@ -15,9 +15,9 @@ namespace API.Extension;
         {
             options.AddPolicy("CorsPolicy", builder =>
             {
-                builder.AllowAnyHeader() //WithOrigins("https://localhost:4200")
+                builder.AllowAnyHeader() 
                 .AllowAnyMethod()   //WithMethods("GET", "POST", "PUT", "DELETE")
-                .WithOrigins("https://localhost:4200"); //WithHeaders("accept", "content-type", "origin", "x-custom-header");
+                .WithOrigins(); //WithHeaders("accept", "content-type", "origin", "x-custom-header");
             });
         });
         public static void ConfigureRateLimiting(this IServiceCollection services)

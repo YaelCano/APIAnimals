@@ -7,5 +7,6 @@ namespace Core.Interface;
 
 public interface IPais : IGenericRepository<Pais>
 {
+    
 }
 
