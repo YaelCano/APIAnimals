@@ -48,7 +48,7 @@ public class DepartamentoController : BaseController
     public async Task<ActionResult<Departamento>> Post(DepartamentoDto departamentoDto)
     {
         var departamento = _mapper.Map<Departamento>(departamentoDto);
-        this._unitOfWork.Departamento.Add(departamento);
+        _unitOfWork.Departamento.Add(departamento);
         await _unitOfWork.SaveAsync();
         if(departamento == null)
         {
